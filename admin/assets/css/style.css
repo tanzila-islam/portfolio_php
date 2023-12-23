@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+:root {
+
+    /**
+     * colors
+     */
+
+    --white: hsla(0, 0%, 100%, 1);
+    --white_a8: hsla(0, 0%, 100%, 0.08);
+    --white_a12: hsla(0, 0%, 100%, 0.12);
+    --cultured: hsla(220, 20%, 97%, 1);
+    --snow: hsla(345, 57%, 97%, 1);
+    --manatee: hsla(219, 10%, 62%, 1);
+    --black-coral: hsla(220, 12%, 43%, 1);
+    --cadet-blue-crayola_a20: hsla(222, 23%, 71%, 0.2);
+    --cinnamon-satin: hsla(344, 53%, 62%, 1);
+    --raisin-black: hsla(216, 14%, 14%, 1);
+    --raisin-black_a6: hsla(216, 14%, 14%, 0.06);
+    --gunmetal: hsla(214, 15%, 21%, 1);
+    --charcoal: hsla(219, 22%, 26%, 1);
+
+    /**
+     * typography
+     */
+
+    --ff-manrope: 'Manrope', sans-serif;
+    --ff-nova: "Nova Square";
+    --ff-sarif: 'Noto Serif', serif;
+
+    --fs-1: calc(2.7rem + 1.2vw);
+    --fs-2: calc(2.6rem + .66vw);
+    --fs-3: calc(2.6rem + .24vw);
+    --fs-4: 1.9rem;
+    --fs-5: 1.8rem;
+    --fs-6: 1.7rem;
+    --fs-7: 1.5rem;
+    --fs-8: 1.4rem;
+
+    --fw-700: 700;
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 90px;
+
+    /**
+     * box shadow
+     */
+
+    --shadow-1: 0 0 20px hsla(216, 14%, 14%, 0.05);
+    --shadow-2: 0 4px 28px hsla(216, 14%, 14%, 0.07);
+
+    /**
+     * border radius
+     */
+
+    --radius-circle: 50%;
+    --radius-pill: 100px;
+    --radius-8: 8px;
+    --radius-6: 6px;
+
+    /**
+     * transition
+     */
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --transition-3: 0.3s ease-in-out;
+
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+button,
+ion-icon {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+html {
+    font-family: var(--ff-manrope);
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black-coral);
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+body.nav-active {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0, 0%, 70%);
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    font-family: "Nova Square";
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    box-shadow: 1px 1px 8px 1px #d5cfcf;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    margin: 50px 50px 0px 50px;
+
+}
+
+/* Nav Section */
+.nav {
+    font-family: "Nova Square";
+    display: inline-block;
+    max-width: 400px;
+    width: 250px;
+    max-height: 800px;
+    height: 400px;
+    box-shadow: 0px 0px 10px 0px #d5cfcf;
+    background-color: var(--cinnamon-satin);
+    color: #fff;
+    border-radius: 10px;
+    margin: 80px 0px 0px 50px;
+    border: 1px solid #555;
+}
+
+.item {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    border: 0.5px solid #ffffff52;
+}
+
+.item:hover {
+    background-color: #fff;
+    color:var(--cinnamon-satin);
+}
+.item.active{
+    background-color: #fff;
+    color:var(--cinnamon-satin);
+}
+
+
+/* Login Page */
+.login-body {
+    font-family: var(--ff-nova);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    font-family: var(--ff-sarif);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    .login-container {
+        width: 80%;
+    }
+}
+
+
+/* Section Profile */
+
+.container{
+    display: flex;
+}
+
+.section{
+    font-family: var(--ff-sarif);
+    display: inline-block;
+    margin: 80px 0px 0px 50px;
+    max-width: 800px;
+    width: 700px;
+    padding: 50px 60px 50px 60px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px 1px #d5cfcf;
+}
+
+.image-input-container {
+    position: relative;
+    text-align: center;
+}
+
+.image-upload-label {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-upload-label img {
+    width: 100px; /* Adjust the size of the image */
+    height: 100px; /* Adjust the size of the image */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Hide the default file input */
+.hidden {
+    display: none;
+}
+.section form input{
+    font-family: var(--ff-sarif);
+    font-size: var(--fs-6);
+}
